@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { FILTER_CATEGORIES, SUPPLIER_TYPES, BRAND_FILTERS, PRODUCT_CATALOGUE } from "@/lib/data";
 
 const PER_PAGE = 9;
@@ -164,7 +165,7 @@ export default function ProductListing() {
         <div className="f-banner reveal">
           <b>Need help choosing?</b>
           <p>Talk to a category specialist for tailored recommendations.</p>
-          <a href="/contact" className="btn btn-white" style={{ width: "100%" }}>Request Callback</a>
+          <Link href="/contact" className="btn btn-white" style={{ width: "100%" }}>Request Callback</Link>
         </div>
       </aside>
 

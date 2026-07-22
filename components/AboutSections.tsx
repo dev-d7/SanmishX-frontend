@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ABOUT_STATS, STORY_POINTS, CORE_VALUES, JOURNEY, TEAM, CERTIFICATIONS } from "@/lib/data";
 
 export function AboutHero() {
@@ -18,13 +19,13 @@ export function AboutHero() {
             SANMISH connects buyers, manufacturers and industrial suppliers of alternative fuel infrastructure — bringing the rigour of engineering procurement to CNG, CBG, Bio Gas and Hydrogen equipment across the country.
           </p>
           <div className="hero-cta reveal d3">
-            <a href="/#products" className="btn btn-primary">
+            <Link href="/#products" className="btn btn-primary">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" />
                 <rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
               </svg>
               Explore the marketplace
-            </a>
+            </Link>
             <a href="#footer" className="btn btn-ghost">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -380,19 +381,19 @@ export function AboutCTASection() {
           <h2>Let&rsquo;s build the clean energy backbone together</h2>
           <p>Whether you&rsquo;re sourcing equipment or supplying it, SANMISH is where India&rsquo;s CNG, CBG, Bio Gas and Hydrogen projects come to life.</p>
           <div className="cta-btns">
-            <a href="/#products" className="btn btn-white">
+            <Link href="/#products" className="btn btn-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" />
                 <rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
               </svg>
               Explore marketplace
-            </a>
-            <a href="/#cta" className="btn btn-light">
+            </Link>
+            <Link href="/#cta" className="btn btn-light">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6M22 11h-6" />
               </svg>
               Become a seller
-            </a>
+            </Link>
           </div>
         </div>
       </div>

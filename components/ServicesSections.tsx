@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SERVICES, PROCESS_STEPS, INDUSTRIES, SERVICE_STATS } from "@/lib/data";
 
 export function ServicesHero() {
@@ -18,12 +19,12 @@ export function ServicesHero() {
             Beyond the marketplace, SANMISH delivers the full lifecycle — supply, installation, commissioning and maintenance of CNG, CBG, Bio Gas and Hydrogen systems, handled by certified engineers.
           </p>
           <div className="hero-cta reveal d3">
-            <a href="/contact" className="btn btn-primary">
+            <Link href="/contact" className="btn btn-primary">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M9 15l2 2 4-4" />
               </svg>
               Request a quote
-            </a>
+            </Link>
             <a href="#services-list" className="btn btn-ghost">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -228,12 +229,12 @@ export function WhyServicesSection() {
               </div>
             ))}
           </div>
-          <a href="/contact" className="btn btn-primary reveal d3" style={{ marginTop: 32 }}>
+          <Link href="/contact" className="btn btn-primary reveal d3" style={{ marginTop: 32 }}>
             Talk to an engineer
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -298,19 +299,19 @@ export function ServicesCTASection() {
           <h2>Have a project scope in mind?</h2>
           <p>Tell us what you&rsquo;re building — from a single dispenser to a full station — and our engineers will scope it with you.</p>
           <div className="cta-btns">
-            <a href="/contact" className="btn btn-white">
+            <Link href="/contact" className="btn btn-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" />
               </svg>
               Request a quote
-            </a>
-            <a href="/products" className="btn btn-light">
+            </Link>
+            <Link href="/products" className="btn btn-light">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" />
                 <rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
               </svg>
               Browse equipment
-            </a>
+            </Link>
           </div>
         </div>
       </div>

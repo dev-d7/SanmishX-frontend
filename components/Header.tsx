@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/data";
 import { resolveHref } from "@/lib/nav";
@@ -30,21 +31,21 @@ export default function Header() {
     <>
       <header className={`header${scrolled ? " scrolled" : ""}`} id="header">
         <div className="wrap nav">
-          <a href={resolveHref("#home", pathname)} className="brand" aria-label="SANMISH home">
+          <Link href={resolveHref("#home", pathname)} className="brand" aria-label="SANMISH home">
             <Image src="/SanmishXLOGO.jpg" alt="SANMISH — Clean Energy Smarter Solutions logo" width={93} height={58} style={{ height: 58, width: "auto" }} priority />
-          </a>
+          </Link>
           <nav className="nav-menu" aria-label="Primary">
             {NAV_LINKS.map((link) => {
               const isActive = link.href === pathname;
               return (
-                <a
+                <Link
                   key={link.label}
                   href={resolveHref(link.href, pathname)}
                   className={isActive ? "active" : undefined}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -55,15 +56,15 @@ export default function Header() {
               </svg>
               Login
             </a>
-            <a href={resolveHref("#cart", pathname)} className="link-btn desk-only nav-iconlink">
+            <Link href={resolveHref("#cart", pathname)} className="link-btn desk-only nav-iconlink">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
               Cart
-            </a>
-            <a href={resolveHref("#cta", pathname)} className="btn btn-ghost desk-only">Request Quote</a>
-            <a href={resolveHref("#cta", pathname)} className="btn btn-primary">Become Seller</a>
+            </Link>
+            <Link href={resolveHref("#cta", pathname)} className="btn btn-ghost desk-only">Request Quote</Link>
+            <Link href={resolveHref("#cta", pathname)} className="btn btn-primary">Become Seller</Link>
             <button className="burger" id="burger" aria-label="Open menu" onClick={openDrawer}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M3 6h18M3 12h18M3 18h18" />
@@ -86,11 +87,11 @@ export default function Header() {
             </button>
           </div>
           {NAV_LINKS.map((link) => (
-            <a key={link.label} className={`mlink${link.href === pathname ? " active" : ""}`} href={resolveHref(link.href, pathname)} onClick={closeDrawer}>{link.label}</a>
+            <Link key={link.label} className={`mlink${link.href === pathname ? " active" : ""}`} href={resolveHref(link.href, pathname)} onClick={closeDrawer}>{link.label}</Link>
           ))}
           <div className="drawer-cta">
             <a href="#" className="btn btn-ghost" onClick={closeDrawer}>Login</a>
-            <a href={resolveHref("#cta", pathname)} className="btn btn-primary" onClick={closeDrawer}>Become Seller</a>
+            <Link href={resolveHref("#cta", pathname)} className="btn btn-primary" onClick={closeDrawer}>Become Seller</Link>
           </div>
         </div>
       </div>

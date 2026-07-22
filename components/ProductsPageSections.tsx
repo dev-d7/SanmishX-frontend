@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function PageBanner() {
   return (
     <section className="pg-banner">
@@ -8,7 +10,7 @@ export function PageBanner() {
       </div>
       <div className="wrap">
         <div className="crumbs reveal">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m9 18 6-6-6-6" />
           </svg>
@@ -65,8 +67,8 @@ export function ListingCTASection() {
           <h2>Can&rsquo;t find what you&rsquo;re looking for?</h2>
           <p>Post a requirement and get quotations from verified manufacturers within 24 hours.</p>
           <div className="cta-btns">
-            <a href="/contact" className="btn btn-white">Post Requirement</a>
-            <a href="/#categories" className="btn btn-light">Browse Categories</a>
+            <Link href="/contact" className="btn btn-white">Post Requirement</Link>
+            <Link href="/#categories" className="btn btn-light">Browse Categories</Link>
           </div>
         </div>
       </div>

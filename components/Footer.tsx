@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LOGO_BASE64 } from "@/lib/data";
 import { resolveHref } from "@/lib/nav";
@@ -42,12 +43,12 @@ export default function Footer() {
 
           <div className="foot-col">
             <h4>Categories</h4>
-            <a href={resolveHref("#categories", pathname)}>CNG Equipment</a>
-            <a href={resolveHref("#categories", pathname)}>CBG Systems</a>
-            <a href={resolveHref("#categories", pathname)}>Bio Gas Plants</a>
-            <a href={resolveHref("#categories", pathname)}>Flow Meters</a>
-            <a href={resolveHref("#categories", pathname)}>Compressors</a>
-            <a href={resolveHref("#categories", pathname)}>Storage Tanks</a>
+            <Link href={resolveHref("#categories", pathname)}>CNG Equipment</Link>
+            <Link href={resolveHref("#categories", pathname)}>CBG Systems</Link>
+            <Link href={resolveHref("#categories", pathname)}>Bio Gas Plants</Link>
+            <Link href={resolveHref("#categories", pathname)}>Flow Meters</Link>
+            <Link href={resolveHref("#categories", pathname)}>Compressors</Link>
+            <Link href={resolveHref("#categories", pathname)}>Storage Tanks</Link>
           </div>
 
           <div className="foot-col">
@@ -61,11 +62,11 @@ export default function Footer() {
 
           <div className="foot-col">
             <h4>Support</h4>
-            <a href={resolveHref("#services", pathname)}>Installation</a>
-            <a href={resolveHref("#services", pathname)}>AMC Services</a>
-            <a href={resolveHref("#services", pathname)}>Spare Parts</a>
+            <Link href={resolveHref("#services", pathname)}>Installation</Link>
+            <Link href={resolveHref("#services", pathname)}>AMC Services</Link>
+            <Link href={resolveHref("#services", pathname)}>Spare Parts</Link>
             <a href="#">Help Center</a>
-            <a href={resolveHref("#footer", pathname)}>Contact Us</a>
+            <Link href={resolveHref("#footer", pathname)}>Contact Us</Link>
           </div>
 
           <div className="foot-news">

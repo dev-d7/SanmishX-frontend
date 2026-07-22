@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SUPPLIER_STATS, SUPPLIER_WHY_ITEMS, SUPPLIER_JOIN_STEPS, SUPPLIER_BENEFITS } from "@/lib/data";
 
 export function SuppliersHero() {
@@ -182,12 +183,12 @@ export function WhySourceSection() {
               </div>
             ))}
           </div>
-          <a href="/contact" className="btn btn-primary reveal d3" style={{ marginTop: 32 }}>
+          <Link href="/contact" className="btn btn-primary reveal d3" style={{ marginTop: 32 }}>
             Request a quotation
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -255,18 +256,18 @@ export function SuppliersCTASection() {
           <h2>Ready to reach more buyers?</h2>
           <p>Join 500+ verified suppliers already receiving qualified RFQs from buyers across India.</p>
           <div className="cta-btns">
-            <a href="/#cta" className="btn btn-white">
+            <Link href="/#cta" className="btn btn-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
               </svg>
               Become a seller
-            </a>
-            <a href="/contact" className="btn btn-light">
+            </Link>
+            <Link href="/contact" className="btn btn-light">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               Talk to our team
-            </a>
+            </Link>
           </div>
         </div>
       </div>

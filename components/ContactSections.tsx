@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { OFFICES } from "@/lib/data";
 
 export function TopSearchBand() {
@@ -21,17 +22,17 @@ export function TopSearchBand() {
             </svg>
             <input id="mainsearch" type="text" placeholder="Search equipment — compressors, dispensers, cascade systems…" />
           </div>
-          <a href="/#products" className="btn btn-primary">
+          <Link href="/#products" className="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
             </svg>
             Search
-          </a>
+          </Link>
         </div>
         <div className="quick-tags reveal d1">
           <span className="lbl">Popular:</span>
           {["Compressors", "Dispensers", "Cascade", "Hydrogen", "Biogas", "Valves"].map((t) => (
-            <a key={t} className="tag" href="/#products">{t}</a>
+            <Link key={t} className="tag" href="/#products">{t}</Link>
           ))}
         </div>
       </div>
@@ -218,19 +219,19 @@ export function ContactCTASection() {
           <h2>Prefer to browse first?</h2>
           <p>Explore thousands of verified listings, or list your own products to reach serious industrial buyers across India.</p>
           <div className="cta-btns">
-            <a href="/#products" className="btn btn-white">
+            <Link href="/#products" className="btn btn-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" />
                 <rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
               </svg>
               Explore marketplace
-            </a>
-            <a href="/#cta" className="btn btn-light">
+            </Link>
+            <Link href="/#cta" className="btn btn-light">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6M22 11h-6" />
               </svg>
               Become a seller
-            </a>
+            </Link>
           </div>
         </div>
       </div>

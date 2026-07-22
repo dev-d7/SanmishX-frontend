@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { SUPPLIERS, SUPPLIER_FILTERS } from "@/lib/data";
 
 export default function SupplierDirectory() {
@@ -66,7 +67,7 @@ export default function SupplierDirectory() {
               </div>
               <div className="sup-foot">
                 <span>{s.p} products</span>
-                <a href="/contact" className="btn btn-ghost">Request quote</a>
+                <Link href="/contact" className="btn btn-ghost">Request quote</Link>
               </div>
             </div>
           ))}
