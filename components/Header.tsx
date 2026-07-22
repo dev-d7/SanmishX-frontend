@@ -31,7 +31,7 @@ export default function Header() {
       <header className={`header${scrolled ? " scrolled" : ""}`} id="header">
         <div className="wrap nav">
           <a href={resolveHref("#home", pathname)} className="brand" aria-label="SANMISH home">
-            <Image src="/SanmishXLOGO.jpg" alt="SANMISH — Clean Energy Smarter Solutions logo" width={70} height={44} style={{ height: 44, width: "auto" }} priority />
+            <Image src="/SanmishXLOGO.jpg" alt="SANMISH — Clean Energy Smarter Solutions logo" width={93} height={58} style={{ height: 58, width: "auto" }} priority />
           </a>
           <nav className="nav-menu" aria-label="Primary">
             {NAV_LINKS.map((link) => {
@@ -49,13 +49,19 @@ export default function Header() {
             })}
           </nav>
           <div className="nav-actions">
-            <a href={resolveHref("#cart", pathname)} className="icon-btn" aria-label="Cart">
+            <a href="#" className="link-btn desk-only nav-iconlink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" />
+              </svg>
+              Login
+            </a>
+            <a href={resolveHref("#cart", pathname)} className="link-btn desk-only nav-iconlink">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
+              Cart
             </a>
-            <a href="#" className="link-btn desk-only">Login</a>
             <a href={resolveHref("#cta", pathname)} className="btn btn-ghost desk-only">Request Quote</a>
             <a href={resolveHref("#cta", pathname)} className="btn btn-primary">Become Seller</a>
             <button className="burger" id="burger" aria-label="Open menu" onClick={openDrawer}>

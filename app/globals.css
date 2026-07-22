@@ -208,7 +208,7 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
-.brand img { height: 44px; width: auto; }
+.brand img { height: 58px; width: auto; }
 
 .nav-menu {
   display: flex;
@@ -279,6 +279,11 @@ ul { list-style: none; }
 }
 
 .link-btn:hover { color: var(--blue); }
+
+.nav-iconlink { display: inline-flex; align-items: center; gap: 6px; }
+.nav-iconlink svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.nav-actions .btn { padding: 10px 18px; font-size: .84rem; }
 
 .burger {
   display: none;
