@@ -49,18 +49,12 @@ export default function Header() {
             })}
           </nav>
           <div className="nav-actions">
-            <button
-              className="icon-btn"
-              aria-label="Search"
-              onClick={() => {
-                const el = document.getElementById("mainsearch");
-                if (el) el.focus();
-              }}
-            >
+            <a href={resolveHref("#cart", pathname)} className="icon-btn" aria-label="Cart">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+                <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
-            </button>
+            </a>
             <a href="#" className="link-btn desk-only">Login</a>
             <a href={resolveHref("#cta", pathname)} className="btn btn-ghost desk-only">Request Quote</a>
             <a href={resolveHref("#cta", pathname)} className="btn btn-primary">Become Seller</a>
