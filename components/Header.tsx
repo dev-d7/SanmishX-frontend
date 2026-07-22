@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS, LOGO_BASE64 } from "@/lib/data";
+import { NAV_LINKS } from "@/lib/data";
 import { resolveHref } from "@/lib/nav";
 
 export default function Header() {
@@ -31,7 +31,7 @@ export default function Header() {
       <header className={`header${scrolled ? " scrolled" : ""}`} id="header">
         <div className="wrap nav">
           <a href={resolveHref("#home", pathname)} className="brand" aria-label="SANMISH home">
-            <Image src={LOGO_BASE64} alt="SANMISH — Clean Energy Smarter Solutions logo" width={132} height={44} style={{ height: 44, width: "auto" }} priority unoptimized />
+            <Image src="/SanmishXLOGO.jpg" alt="SANMISH — Clean Energy Smarter Solutions logo" width={70} height={44} style={{ height: 44, width: "auto" }} priority />
           </a>
           <nav className="nav-menu" aria-label="Primary">
             {NAV_LINKS.map((link) => {
@@ -72,7 +72,7 @@ export default function Header() {
         <div className="drawer-bg" onClick={closeDrawer} />
         <div className="drawer-panel">
           <div className="drawer-top">
-            <Image src={LOGO_BASE64} alt="SANMISH" width={110} height={38} style={{ height: 38 }} unoptimized />
+            <Image src="/SanmishXLOGO.jpg" alt="SANMISH" width={61} height={38} style={{ height: 38, width: "auto" }} />
             <button className="icon-btn" onClick={closeDrawer} aria-label="Close menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M18 6 6 18M6 6l12 12" />
