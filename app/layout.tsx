@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
   title: "SANMISH — India's B2B Marketplace for Clean Energy Infrastructure | CNG, CBG, Bio Gas & Hydrogen Equipment",
@@ -48,10 +49,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ChatWidget />
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <ChatWidget />
+        </CartProvider>
       </body>
     </html>
   );

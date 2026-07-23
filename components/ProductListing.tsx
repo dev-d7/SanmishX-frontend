@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { FILTER_CATEGORIES, SUPPLIER_TYPES, BRAND_FILTERS, PRODUCT_CATALOGUE } from "@/lib/data";
+import { slugify } from "@/lib/slug";
 
 const PER_PAGE = 9;
 const inr = (n: number) => "₹ " + n.toLocaleString("en-IN");
@@ -250,7 +251,7 @@ export default function ProductListing() {
                       <b>{inr(p.p)}</b>
                     </div>
                     <div className="prod-actions">
-                      <button className="mini-btn o">Details</button>
+                      <Link href={`/products/${slugify(p.t)}`} className="mini-btn o">Details</Link>
                       <button className="mini-btn g">Get Quote</button>
                     </div>
                   </div>

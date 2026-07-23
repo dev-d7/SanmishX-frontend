@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { FEATURE_HIGHLIGHTS, CATEGORIES, PRODUCTS } from "@/lib/data";
+import { slugify } from "@/lib/slug";
 
 export function SearchBand() {
   const handleTagClick = (text: string) => {
@@ -134,7 +136,7 @@ export function FeaturedProducts() {
                     <b>{p.p}</b>
                   </div>
                   <div className="prod-actions">
-                    <button className="mini-btn o">Details</button>
+                    <Link href={`/products/${slugify(p.t)}`} className="mini-btn o">Details</Link>
                     <button className="mini-btn g">Get Quote</button>
                   </div>
                 </div>
